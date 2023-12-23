@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coba</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+		<nav>
+			<a href="#" class="logo">suitmedia</a>
+			<ul>
+				<li><a href="#work" class="active">Work</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#ideas">Ideas</a></li>
+				<li><a href="#careers">Careers</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+    <section class="Work" id="work">
+        <h2 class="all-heading">Work Section</h2>
+    </section>
+    <section class="About" id="about">
+        <h2 class="all-heading">About Section</h2>
+    </section>
+    <section class="Services" id="services">
+        <h2 class="all-heading">Services Section</h2>
+    </section>
+    <section class="Ideas" id="ideas">
+        <h2 class="all-heading">Ideas Section</h2>
+    </section>
+    <section class="Careers" id="careers">
+        <h2 class="all-heading">Careers Section</h2>
+    </section>
+    <section class="Contact" id="contact">
+        <h2 class="all-heading">Contact Section</h2>
+    </section>
+
+    <script>
+		const nav = document.querySelector('nav');
+		let prevScrollpos = window.pageYOffset;
+
+		window.addEventListener('scroll', () => {
+			let currentScrollPos = window.pageYOffset;
+
+			if (prevScrollpos < currentScrollPos) {
+				nav.classList.add('hide');
+			} else {
+				nav.classList.remove('hide');
+			}
+
+			prevScrollpos = currentScrollPos;
+		})
+	</script>
+    <script src="index.js"></script>
+</body>
+
+</html>
